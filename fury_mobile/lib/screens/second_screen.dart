@@ -1,6 +1,9 @@
 import 'package:audioplayers/audio_cache.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../logic.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({this.payload, this.scheduleNotification});
@@ -14,9 +17,16 @@ class SecondScreen extends StatefulWidget {
 
 class SecondScreenState extends State<SecondScreen> {
   String _payload;
+  SharedPreferences prefs;
+
+  setPref() async {
+    prefs = await SharedPreferences.getInstance();
+  }
+
   @override
   void initState() {
     super.initState();
+    setPref();
     _payload = widget.payload;
   }
 
@@ -42,9 +52,9 @@ class SecondScreenState extends State<SecondScreen> {
                 final player = AudioCache();
                 player.play('note1.wav');
                 widget.scheduleNotification(
-                    interval: 15,
-                    title: 'Handwash sdsdReminder',
-                    body: 'Handwash Reminder');
+                    interval: int.parse( prefs.getString('interval')),
+                    title: 'Handwash Reminder',
+                    body: "${prefs.getString('name')} it's time to wash your hands");
               }),
         ),
       ),
