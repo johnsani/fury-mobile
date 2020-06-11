@@ -7,7 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:fury_mobile/screens/home.dart';
+import 'package:provider/provider.dart';
 import 'package:rxdart/subjects.dart';
+
+import 'logic.dart';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
     FlutterLocalNotificationsPlugin();
@@ -23,8 +26,9 @@ NotificationAppLaunchDetails notificationAppLaunchDetails;
 
 Future<void> _scheduleNotification(
     {int interval, String title, String body}) async {
+  print(interval);
   var scheduledNotificationDateTime =
-      DateTime.now().add(Duration(minutes: interval));
+      DateTime.now().add(Duration(seconds: interval));
   var vibrationPattern = Int64List(4);
   vibrationPattern[0] = 0;
   vibrationPattern[1] = 1000;
@@ -102,10 +106,13 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(
-        scheduleNotification: _scheduleNotification,
+    return ChangeNotifierProvider(
+      child: MaterialApp(
+        home: HomePage(
+          scheduleNotification: _scheduleNotification,
+        ),
       ),
+      create: (BuildContext context) => Logic(),
     );
   }
 }
@@ -127,6 +134,5 @@ class PaddedRaisedButton extends StatelessWidget {
     );
   }
 }
-
 
 /// Schedules a notification that specifies a different icon, sound and vibration pattern
