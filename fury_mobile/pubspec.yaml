@@ -57,6 +57,8 @@ flutter:
     - images/
     - icons/
     - assets/
+    - assets/images/login.png
+    - assets/images/home.png
 
   #   - images/a_dot_ham.jpeg
 
