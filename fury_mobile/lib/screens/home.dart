@@ -7,7 +7,6 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../logic.dart';
-import '../logic.dart';
 import '../main.dart';
 import 'second_screen.dart';
 
@@ -221,6 +220,13 @@ class _HomePageState extends State<HomePage> {
                                   if (_formKey.currentState.validate()) {
                                     _formKey.currentState.save();
                                     print('valid');
+
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReminderSet(),
+                                      ),
+                                    );
                                     // Navigate to dashboard
                                     /* Navigator.of(context).pushAndRemoveUntil(
                                         MaterialPageRoute(
@@ -241,6 +247,41 @@ class _HomePageState extends State<HomePage> {
                 ]),
               )),
         ],
+      ),
+    );
+  }
+}
+
+class ReminderSet extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      type: MaterialType.transparency,
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Stack(
+          children: <Widget>[
+            Container(
+              height: double.infinity,
+              width: double.infinity,
+              child: Image.asset('images/thumbs-up.png'),
+            ),
+            Container(
+              padding: EdgeInsets.all(15.0),
+              alignment: Alignment.bottomCenter,
+              margin: EdgeInsets.only(bottom: 30.0),
+              child: Text(
+                'Your reminder has been set.\n You will be notified when it is time to wash your hands.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.purple.shade900,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25.0,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
