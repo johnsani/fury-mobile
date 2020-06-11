@@ -7,13 +7,11 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../logic.dart';
+import '../logic.dart';
 import '../main.dart';
 import 'second_screen.dart';
 
-
-
 // this page is seen as the login page
-
 
 class HomePage extends StatefulWidget {
   const HomePage({this.scheduleNotification});
@@ -25,13 +23,25 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final MethodChannel platform =
       MethodChannel('crossingthestreams.io/resourceResolver');
+
+  SharedPreferences prefs;
+  /* String name;
+
+  Future setPref() async {
+    prefs = await SharedPreferences.getInstance();
+    setState(() {
+      name = prefs.getString('interval');
+    });
+  }
+ */
   @override
   void initState() {
     super.initState();
     _requestIOSPermissions();
     _configureDidReceiveLocalNotificationSubject();
     _configureSelectNotificationSubject();
-    checkname();
+    //checkname();
+    //setPref();
   }
 
   void _requestIOSPermissions() {
@@ -198,9 +208,10 @@ class _HomePageState extends State<HomePage> {
                                 color: Colors.purple[900],
                                 onPressed: () async {
                                   await widget.scheduleNotification(
-                                      interval: _dropdownValue,
-                                      title: '$_name Covid Prevention',
-                                      body: 'its time to wash your hands');
+                                      interval: int.parse(_dropdownValue),
+                                      title: 'Handwash Reminder',
+                                      body:
+                                          "$_name it's time to wash your hands");
                                   // save users name in shared prefrence
                                   logic.signin(_name);
                                   // save users interval choice in shared prefrence
@@ -211,14 +222,15 @@ class _HomePageState extends State<HomePage> {
                                     _formKey.currentState.save();
                                     print('valid');
                                     // Navigate to dashboard
-                                    Navigator.of(context).pushAndRemoveUntil(
+                                    /* Navigator.of(context).pushAndRemoveUntil(
                                         MaterialPageRoute(
-                                            builder: (context) => SecondScreen()),
-                                        (Route<dynamic> route) => false);
+                                            builder: (context) =>
+                                                SecondScreen()),
+                                        (Route<dynamic> route) => false); */
                                   }
                                 },
                                 child: Text(
-                                  'start notifying me',
+                                  'Start notifying me',
                                   style: TextStyle(color: Colors.white),
                                 ),
                               )
