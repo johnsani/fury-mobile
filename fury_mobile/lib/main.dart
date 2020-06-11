@@ -28,7 +28,7 @@ Future<void> _scheduleNotification(
     {int interval, String title, String body}) async {
   print(interval);
   var scheduledNotificationDateTime =
-      DateTime.now().add(Duration(seconds: interval));
+      DateTime.now().add(Duration(minutes: interval));
   var vibrationPattern = Int64List(4);
   vibrationPattern[0] = 0;
   vibrationPattern[1] = 1000;
