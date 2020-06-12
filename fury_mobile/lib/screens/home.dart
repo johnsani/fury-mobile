@@ -257,31 +257,51 @@ class ReminderSet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       type: MaterialType.transparency,
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: Stack(
-          children: <Widget>[
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              child: Image.asset('images/thumbs-up.png'),
-            ),
-            Container(
+      child: Stack(
+        children: <Widget>[
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            child: Image.asset('images/splash.png'),
+          ),
+          Center(
+            child: Container(
               padding: EdgeInsets.all(15.0),
-              alignment: Alignment.bottomCenter,
-              margin: EdgeInsets.only(bottom: 30.0),
-              child: Text(
-                'Your reminder has been set.\n You will be notified when it is time to wash your hands.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.purple.shade900,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25.0,
-                ),
+//                alignment: Alignment.bottomCenter,
+              margin: EdgeInsets.only(top: 30.0),
+
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'Your reminder has been set.\n You will be notified when it is time to wash your hands.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24.0,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  FlatButton(
+                    onPressed: () {
+                      SystemNavigator.pop();
+                    },
+                    child: Text(
+                      'Leave App!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
