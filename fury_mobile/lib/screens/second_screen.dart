@@ -80,17 +80,19 @@ class SecondRoute extends StatelessWidget {
             width: double.infinity,
             child: Image.asset('images/Splash Screen.png'),
           ),
-          Container(
-            padding: EdgeInsets.all(15.0),
-            alignment: Alignment.bottomCenter,
-            margin: EdgeInsets.only(bottom: 30.0),
-            child: Text(
-              'Well done! \n Your hands must be squeaky clean',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 24.0,
+          Center(
+            child: Container(
+              padding: EdgeInsets.only(top: 30.0),
+//              alignment: Alignment.bottomCenter,
+              margin: EdgeInsets.only(top: 150.0),
+              child: Text(
+                'Well done! \n Your hands must be squeaky clean.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24.0,
+                ),
               ),
             ),
           ),
