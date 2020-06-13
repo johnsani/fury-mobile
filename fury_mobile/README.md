@@ -8,7 +8,7 @@
 * [Feedback](#Feedback)
 * [Contributors](#Contributors)
 * [Build process](#Build-process)
-* [Acknowledgement](
+* [Acknowledgement](Acknowledgement)
 
 ## Introduction. 
    Seeking to cut down the risk of infection? Have bad habits of not washing your hands? Here is an app for you.
@@ -28,8 +28,8 @@ Here is the [Github link](https://github.com/hng-teamfury-org/mobile.git) for fu
 
 ## Contributors
 This project is brought to you by  
-Team lead: [TimmyBanjo](https://github.com/Trojan9)
-Deputy team lead: [Festus-Okunola](http://github.com/damisco87)
+Team lead: [TimmyBanjo](https://github.com/Trojan9)  
+Deputy team lead: [Festus-Okunola](http://github.com/damisco87)  
 Members and developers:  
         [Nimi](http://github.com/johnsani)
 	[Fridaychukwuamaka](https://github.com/fridaychukwuamaka)
@@ -38,9 +38,6 @@ Members and developers:
 	[Joseph](https://github.com/uncleejay)
 	[Robincruseo](https://github.com/robincruseo)
 	[Vecta](https://github.com/vectaaa)
-	@akinrinde
-	@Kay
-	@Folarin Isaac
 
 ## Build process
 ###### Software used: Flutter
