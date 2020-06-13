@@ -8,10 +8,12 @@
 * [Feedback](#Feedback)
 * [Contributors](#Contributors)
 * [Build process](#Build-process)
-* [Acknowledgement](#Acknowledgement)
+* [Acknowledgement](
 
-## Introduction
-The Handwash Reminder app is designed and built in the wake of the pandemic, as a means of encouraging the handwashing hygiene that was essentially adviced, for prevention purposes. It is an entirely novel and collaborative project.  
+## Introduction. 
+   Seeking to cut down the risk of infection? Have bad habits of not washing your hands? Here is an app for you.
+The Handwasher Reminder app aims to help users by sending time-based notifications to remind them about washing their hands. Handwashing is a simple, effective, and inexpensive way to fight off infections and keep yourself healthy. Handwashing may be a routine habit for some, but for others who struggle to wash their hands frequently, this app makes it easy for you to remember to wash your hands. Whether you are home, at work, travelling, or out in the community, the Handwash Reminder is here to be your hygiene companion. Never forget to wash your hands again.
+  
 ###### Target market - Smartphone owners  
 ###### Purpose: The purpose of this document is to describe the mobile operations required for implementation of the design, and the steps taken to achieve the implementation.
 
