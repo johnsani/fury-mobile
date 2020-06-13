@@ -1,36 +1,52 @@
-# fury-mobile
-# Mobile
+# Team Fury Mobile Documentation
 
-The main mobile repository. This is the main entry point to the mobile libraries and packages.
+## Application: Handwash Reminder
 
-![image](https://user-images.githubusercontent.com/17856665/83970785-80c03c00-a8cf-11ea-9e97-f8edfb3fcfab.png)
+## Table of Content
+* [Introduction](#Introduction)
+* [Features](#Features)
+* [Feedback](#Feedback)
+* [Contributors](#Contributors)
+* [Build process](#Build-process)
+* [Acknowledgement](#Acknowledgement)
 
-> [**Slack Link**](https://hngi7.slack.com/archives/C013K32KMRQ/p1591537761438900)
+## Introduction
+The Handwash Reminder app is designed and built in the wake of the pandemic, as a means of encouraging the handwashing hygiene that was essentially adviced, for prevention purposes. It is an entirely novel and collaborative project.  
+###### Target market - Smartphone owners  
+###### Purpose: The purpose of this document is to describe the mobile operations required for implementation of the design, and the steps taken to achieve the implementation.
 
-## Getting Started
+## Features 
+- 20mins alarm clock reminder to wash hands
+- Setting the next wash time
+- A handwash progress/activity tracker 
 
-The following were discussed before 2am today. However, other members of the team are given the priviledge to share more idea latest by 9am today (8th June 2020) to make the idea better before we move forward.
+## Feedback
+Feel free to send us feedback on [hng.teamfury@gmail.com](hng.teamfury@gmail.com). Feature requests are always welcome.
+Here is the [Github link](https://github.com/hng-teamfury-org/mobile.git) for further contributions or feedback.
 
+## Contributors
+This project is brought to you by  
+Team lead:  @TimmyBanjo  
+Deputy team lead:  @Festus-Okunola  
+Members and developers:  
+	@Folarin Isaac
+	@Nimi
+	@fridaychukwuamaka  
+	@Maro
+	@vecta
+	@Francis22
+	@akinrinde
+	@joseph
+	@Robincruseo
+	@Timzz
+	@Kay
 
-## Idea - 
+## Build process
+###### Software used: Flutter
+A few resources to get you started if this is your first Flutter project:  
+[Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)  
+[Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)  
+For help getting started with Flutter, view our [online documentation](https://flutter.dev/docs), which offers tutorials, samples, guidance on mobile development, and a full API reference.
 
-Develop a hand-washing reminder app for Covid19 prevention
-
-Primary feature of the app
-  *remind (alarm with a certain message) to wash their hands
-
-Secondary features
-  *Set up various tasks for Covid19 preventions e.g. time to c
-
-
-
-## Tasks
-1. We ask the designer/frontend team to make a design, using Adobe XD, because flutter is able to convert Adobe XD designs to code
-
-## Design
-1. The app will first be designed with the primary features
-2. Secondary features can be added later
-
-
-## Code of Conduct
-
+## Acknowledgement
+Special thanks to Mark Essien and the entire HNGi7 team
